@@ -1,0 +1,15 @@
+<h2>Hello from {{title}} !</h2> <!--Premier type de binding : Interpolation {{}}-->
+<input type="text" class="form-control" [(ngModel)]="title" /> <!--Quatrième type de binding : Two-way Binding [(ngModel)]-->
+<p>{{description}}</p>
+
+<button class="btn btn-primary" (click)="changeLogo()" >Change logo</button> <!--Troisième type de binding : Event Binding ()-->
+<img [src]="image.url" [alt]="image.alt" width="200px" height="auto" />  <!-- Deuxième type de binding : Property Binding []-->
+
+<!--Directives structurelles-->
+<!--1.*ngFor : afficher une liste d'éléments -->
+<ul>
+    <li *ngFor="let m of mois">{{m}}</li>
+</ul>
+
+
+<app-second></app-second>
