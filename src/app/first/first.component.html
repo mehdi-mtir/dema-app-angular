@@ -25,11 +25,15 @@
         <tr *ngFor="let p of pays">
             <td>{{p.nom}}</td>
             <td>{{p.capitale}}</td>
-            <td><button class="btn btn-info" (click)="showCard(p)">Afficher les détails</button></td>
+            <td><button class="btn btn-info" (click)="showChild(p)">Afficher les détails</button></td>
         </tr>
     </tbody>
 </table>
 
 <!--Transfert de données du composant Parent (FirstComponent) vers le composant fils (SecondComponent)-->
 <!--2. *ngIf : affichage conditionnel des éléments HTML-->
-<app-second [country]="selectedPays" *ngIf="selectedPays !== undefined"></app-second>
+<app-second 
+    [country]="selectedPays" 
+    *ngIf="selectedPays !== undefined"
+    (hideDetailsEvent)="hideChild($event)">
+</app-second>

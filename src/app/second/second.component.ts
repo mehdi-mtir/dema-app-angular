@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Country } from '../model/country';
 
 @Component({
@@ -8,4 +8,9 @@ import { Country } from '../model/country';
 })
 export class SecondComponent {
   @Input() country? : Country;
+  @Output() hideDetailsEvent = new EventEmitter<string>();
+
+  sendHideDetailsEvent(){
+    this.hideDetailsEvent.emit("Hide Details Card!")
+  }
 }

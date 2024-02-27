@@ -4,6 +4,6 @@
     <div class="card-body">
         <h5 class="card-title">{{country!.nom}}</h5>
         <p class="card-text">{{country!.description}}</p>
-        <a href="#" class="btn btn-primary" >Cacher les détails</a>
+        <a href="#" class="btn btn-primary" (click)="sendHideDetailsEvent()" >Cacher les détails</a>
     </div>
 </div>

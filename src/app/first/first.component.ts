@@ -70,12 +70,13 @@ export class FirstComponent{
         */
     }
 
-    showCard(p : Country){
+    showChild(p : Country){
         this.selectedPays = p;
     }
 
-    hideCard(){
+    hideChild(message : string ){
         this.selectedPays = undefined;
+        console.log(message);
     }
 
 }
