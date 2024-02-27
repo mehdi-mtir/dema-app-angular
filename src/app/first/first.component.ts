@@ -74,4 +74,8 @@ export class FirstComponent{
         this.selectedPays = p;
     }
 
+    hideCard(){
+        this.selectedPays = undefined;
+    }
+
 }
