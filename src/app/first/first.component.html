@@ -12,4 +12,32 @@
 </ul>
 
 
+<h2>Démonstration des directives structurelles :</h2>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Pays</th>
+            <th>Capitale</th>
+            <th>Détails</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of pays">
+            <td>{{p.nom}}</td>
+            <td>{{p.capitale}}</td>
+            <td><button class="btn btn-info" (click)="showCard(p)">Afficher les détails</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<!--2. *ngIf : affichage conditionnel des éléments HTML-->
+<div class="card" style="width: 18rem;" *ngIf="selectedPays !== undefined">
+    <img src="{{selectedPays.drapeau}}" class="card-img-top" alt="{{'Dreapeau de ' + selectedPays.nom}}">
+    <div class="card-body">
+        <h5 class="card-title">{{selectedPays.nom}}</h5>
+        <p class="card-text">{{selectedPays.description}}</p>
+        <a href="#" class="btn btn-primary">Cacher les détails</a>
+    </div>
+</div>
+
 <app-second></app-second>
