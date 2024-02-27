@@ -1,1 +1,9 @@
-<h3>{{title}}</h3>
+<h2>Détails du pays : {{country!.nom}}</h2>
+<div class="card" style="width: 18rem;">
+    <img src="{{country!.drapeau}}" class="card-img-top" alt="{{'Dreapeau de ' + country!.nom}}">
+    <div class="card-body">
+        <h5 class="card-title">{{country!.nom}}</h5>
+        <p class="card-text">{{country!.description}}</p>
+        <a href="#" class="btn btn-primary" >Cacher les détails</a>
+    </div>
+</div>

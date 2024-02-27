@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Country } from '../model/country';
 
 @Component({
   selector: 'app-second',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./second.component.css']
 })
 export class SecondComponent {
-  title = "My Second Component";
+  @Input() country? : Country;
 }

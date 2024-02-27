@@ -5,17 +5,11 @@ export class Country {
     public set id(value: number) {
         this._id = value;
     }
-    public get description(): string {
-        return this._description;
+    public get nom(): string {
+        return this._nom;
     }
-    public set description(value: string) {
-        this._description = value;
-    }
-    public get drapeau(): string {
-        return this._drapeau;
-    }
-    public set drapeau(value: string) {
-        this._drapeau = value;
+    public set nom(value: string) {
+        this._nom = value;
     }
     public get capitale(): string {
         return this._capitale;
@@ -23,11 +17,17 @@ export class Country {
     public set capitale(value: string) {
         this._capitale = value;
     }
-    public get nom(): string {
-        return this._nom;
+    public get drapeau(): string {
+        return this._drapeau;
     }
-    public set nom(value: string) {
-        this._nom = value;
+    public set drapeau(value: string) {
+        this._drapeau = value;
+    }
+    public get description(): string {
+        return this._description;
+    }
+    public set description(value: string) {
+        this._description = value;
     }
 
     constructor(

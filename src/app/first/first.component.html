@@ -30,14 +30,6 @@
     </tbody>
 </table>
 
+<!--Transfert de données du composant Parent (FirstComponent) vers le composant fils (SecondComponent)-->
 <!--2. *ngIf : affichage conditionnel des éléments HTML-->
-<div class="card" style="width: 18rem;" *ngIf="selectedPays !== undefined">
-    <img src="{{selectedPays.drapeau}}" class="card-img-top" alt="{{'Dreapeau de ' + selectedPays.nom}}">
-    <div class="card-body">
-        <h5 class="card-title">{{selectedPays.nom}}</h5>
-        <p class="card-text">{{selectedPays.description}}</p>
-        <a href="#" class="btn btn-primary" (click)="hideCard()">Cacher les détails</a>
-    </div>
-</div>
-
-<app-second></app-second>
+<app-second [country]="selectedPays" *ngIf="selectedPays !== undefined"></app-second>
