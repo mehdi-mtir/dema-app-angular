@@ -6,13 +6,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
+import { ThirdComponent } from './third/third.component';
+import { FourthComponent } from './fourth/fourth.component';
 
 
 @NgModule({
   declarations: [ //Déclarer les composants appartenant à ce module
     AppComponent,
     FirstComponent,
-    SecondComponent
+    SecondComponent,
+    ThirdComponent,
+    FourthComponent
   ],
   imports: [ //importer des modules externes (bibliothèques Angular ou des modules personnalisés)
     BrowserModule,

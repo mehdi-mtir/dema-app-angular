@@ -74,9 +74,9 @@ export class FirstComponent{
         this.selectedPays = p;
     }
 
-    hideChild(message : string ){
+    hideChild(country : Country ){
         this.selectedPays = undefined;
-        console.log(message);
+        console.log(country.nom);
     }
 
 }

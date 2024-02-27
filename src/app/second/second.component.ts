@@ -8,9 +8,9 @@ import { Country } from '../model/country';
 })
 export class SecondComponent {
   @Input() country? : Country;
-  @Output() hideDetailsEvent = new EventEmitter<string>();
+  @Output() hideDetailsEvent = new EventEmitter<Country>();
 
   sendHideDetailsEvent(){
-    this.hideDetailsEvent.emit("Hide Details Card!")
+    this.hideDetailsEvent.emit(this.country)
   }
 }
